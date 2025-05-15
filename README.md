@@ -5,12 +5,13 @@
 This pipeline performs taxonomic classification and abundance estimation of 16S rRNA sequencing data using Kraken 2 and Bracken 2. Kraken 2 assigns taxonomic labels to sequences using exact k-mer matches, while Bracken refines abundance estimates based on Kraken's outputs.
 
 Usage
-Step 1: Build or Download Kraken 2 Database]
+Step 1: Build or Download Kraken 2 Database
 ```
 kraken2-build --download-library bacteria --db kraken2_db
 kraken2-build --build --db kraken2_db
 ``` 
 Step 2: Classify Sequences with Kraken 2
+
 ``` kraken2 --db kraken2_db --paired sample_R1.fastq sample_R2.fastq --output kraken2_output.txt --report kraken2_report.txt ```
 
 Step 3: Estimate Abundances with Bracken 2
