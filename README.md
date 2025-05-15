@@ -11,8 +11,8 @@ kraken2-build --download-library bacteria --db kraken2_db
 kraken2-build --build --db kraken2_db
 ``` 
 Step 2: Classify Sequences with Kraken 2
-
-``` kraken2 --db kraken2_db --paired sample_R1.fastq sample_R2.fastq --output kraken2_output.txt --report kraken2_report.txt ```
+``` kraken2 --db kraken2_db --paired sample_R1.fastq sample_R2.fastq --output kraken2_output.txt --report kraken2_report.txt 
+```
 Step 3: Estimate Abundances with Bracken 2
 ```
 bracken -d kraken2_db -i kraken2_report.txt -o bracken_abundance.txt -r 150 -l S
